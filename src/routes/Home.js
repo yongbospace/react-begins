@@ -23,6 +23,10 @@ const Movies = styled.div`
   gap: 100px;
   padding: 60px 50px;
   width: 80%;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 `;
 
 function Home() {
