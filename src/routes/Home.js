@@ -2,10 +2,26 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import styled from "styled-components";
 
+const Header = styled.header`
+  h1 {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 30px 60px rgba(50, 50, 93, 0.25),
+      0 18px 36px rgba(0, 0, 0, 0.3), 0 -12px 36px rgba(0, 0, 0, 0.025);
+  }
+`;
+
 const Container = styled.div`
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 `;
 
 const Loader = styled.div`
@@ -47,6 +63,9 @@ function Home() {
   console.log(movies);
   return (
     <Container>
+      <Header>
+        <h1>Movies</h1>
+      </Header>
       {loading ? (
         <Loader>
           <span>Loading...</span>
